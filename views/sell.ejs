@@ -1,0 +1,34 @@
+<!-- seller.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell a Book</title>
+  <link rel="stylesheet" type="text/css" href="/sell.css">
+</head>
+<body>
+  <h1>Sell a Book</h1>
+
+  <form method="POST" action="/sell" enctype="multipart/form-data">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" required>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" required>
+
+    <label for="image">Image:</label>
+    <input type="file" id="image" name="image" accept="image/*" required>
+
+    <button type="submit">Sell</button>
+  </form>
+
+  <!-- Add more content or actions as needed -->
+
+</body>
+</html>

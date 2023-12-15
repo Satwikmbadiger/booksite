@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="thrift.css">
+  <title>Book Marketplace</title>
+</head>
+<body>
+  <h1>Welcome to the Book Marketplace</h1>
+  <ul>
+    <% books.forEach(book => { %>
+      <li>
+        <img src="<%= book.image %>" alt="<%= book.title %> Image" style="max-width: 100px; border-radius: 5px;">
+        <%= book.title %> by <%= book.author %> - $<%= book.price %>
+        <form action="/add-to-cart/<%= book._id %>" method="post" style="display: inline;">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/sell">Sell a Book</a>
+  <a href="/dashboard">Dashboard</a>
+  <a href="/cart">Cart</a>
+  <a href="/logout">Logout</a>
+</body>
+</html>

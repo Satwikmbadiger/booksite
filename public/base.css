@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .Genre {
+    width: 1920px;
+    height: 1366px;
+    position: relative;
+    background: #F5EAEA;
+  }
+
+  .BookCategory {
+    position: absolute;
+    color: black;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    word-wrap: break-word;
+  }
+
+  .FictionRomanceAdventureHorrorFantasyScienceFiction {
+    left: 225px;
+    top: 162px;
+  }
+
+  .NonFictionSelfHelpTravelBiographyHistoryPersonalGrowth {
+    left: 663px;
+    top: 162px;
+  }
+
+  .ThrillerMysteryCrimeDetectivePoetryMemoirAstronomy {
+    left: 1142px;
+    top: 162px;
+  }
+
+  .Icon {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+  }
+
+  .TeamFill {
+    left: 1512px;
+    top: 962px;
+  }
+
+  .ShoppingCartFill {
+    left: 956px;
+    top: 967px;
+  }
+
+  .SearchLine {
+    left: 332px;
+    top: 967px;
+    opacity: 0.80;
+  }
+
+  .Description {
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 28px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    word-wrap: break-word;
+  }
+
+  .DiveIntoAWorldOfCuratedTreasuresTurningTheArtOfThriftingIntoAnAdventureYourNextFavoriteReadIsJustAHeartbeatAwayHappyThrifting {
+    width: 516px;
+    height: 116px;
+    left: 731px;
+    top: 1138px;
+  }
+
+  .ExploreWhereEveryClickOpensTheDoorToAWorldOfLiteraryWondersThrillYourSensesCaptivateYourMindAndLetTheAdventureBeginWithEveryPageTurned {
+    width: 483px;
+    left: 124px;
+    top: 1084px;
+  }
+
+  .DiscoverShareAndImmerseYourselfInAWorldWhereEveryPageBringsNewCompanionshipYourNextBookishFriendshipIsJustAClickAway {
+    width: 561px;
+    left: 1314px;
+    top: 1084px;
+  }

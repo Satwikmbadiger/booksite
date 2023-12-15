@@ -1,0 +1,51 @@
+<!-- cart.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" type="text/css" href="/cart.css">
+</head>
+<body>
+  <h1>Your Cart</h1>
+
+  <% let totalAmount = 0; %>
+
+  <% cartItems.forEach(cartItem => { %>
+    <% if (cartItem.book) { %>
+      <div class="cart-item">
+        <img src="/image/<%= cartItem.book._id %>" alt="Book Image">
+        <h3><%= cartItem.book.title %></h3>
+        <p>Author: <%= cartItem.book.author %></p>
+        <p>Price: $<%= cartItem.book.price %></p>
+        <p>Quantity: <%= cartItem.quantity %></p>
+
+        <!-- Form to delete the entire item -->
+        <form method="POST" action="/delete-item/<%= cartItem.book._id %>?_method=POST">
+          <button type="submit">Delete Item</button>
+        </form>
+
+        <!-- Form to reduce the quantity -->
+        <form method="POST" action="/reduce-quantity/<%= cartItem.book._id %>?_method=POST">
+          <button type="submit">-</button>
+        </form>
+
+        <!-- Form to add the quantity -->
+        <form method="POST" action="/add-quantity/<%= cartItem.book._id %>?_method=POST">
+          <button type="submit">+</button>
+        </form>
+
+        <% totalAmount += cartItem.book.price * cartItem.quantity; %>
+      </div>
+      <hr>
+    <% } %>
+  <% }); %>
+
+  <p>Total Amount: $<%= totalAmount.toFixed(2) %></p>
+
+  <a href="/">Continue Shopping</a>
+</body>
+</html>
